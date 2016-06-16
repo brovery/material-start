@@ -19,9 +19,12 @@
 
     self.selected     = null;
     self.users        = [ ];
+      self.squares = [{name: "square1"}, {name: "square2"}, {name: "square3"}, {name: "square4"}];
+      self.squareCount = 4;
     self.selectUser   = selectUser;
     self.toggleList   = toggleUsersList;
     self.makeContact  = makeContact;
+      self.addSquare = addSquare;
 
     // Load all registered users
 
@@ -42,6 +45,26 @@
     function toggleUsersList() {
       $mdSidenav('left').toggle();
     }
+      
+      function addSquare() {
+
+          self.squareCount++;
+          self.squares.push({name: "new square" + self.squareCount});
+          align()
+      }
+
+      
+
+      function align() {
+          var totalwidths = 0;
+          console.log($(".my-cont").width());
+
+          $(".my-item").each(function() {
+              totalwidths += $(this).width();
+              console.log(totalwidths);
+          });
+
+      }
 
     /**
      * Select the current avatars

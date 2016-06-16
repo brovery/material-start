@@ -7,6 +7,17 @@ html, body {
 }
 
 /* Toolbar area */
+.my-cont {
+  width: 90%;
+  margin-left: 5%;
+  overflow: hidden;
+}
+
+.my-item {
+  width: 20%;
+  height: 200px;
+  border: 1px solid black;
+}
 
 .menu {
   background-color: transparent;
